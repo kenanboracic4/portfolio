@@ -1,0 +1,40 @@
+.animated-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.gradient-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+}
+.gradient-bg.dark {
+  opacity: 0.1;
+}
+
+.particle {
+  position: absolute;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+  background-color: #2563eb;
+  opacity: 0.3;
+}
+.particle.dark {
+  background-color: #60a5fa;
+  opacity: 0.4;
+}
+
+.mouse-follower {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, #1d4ed8 0%, transparent 70%);
+  opacity: 0.85;
+}
+.mouse-follower.dark {
+  background: radial-gradient(circle, #3b83f6b7 0%, transparent 50%);
+  opacity: 0.1;
+}
