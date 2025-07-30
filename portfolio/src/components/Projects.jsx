@@ -7,7 +7,7 @@ const allProjects = [
   {
     title: "Whack-a-Mole Game",
     description: "A fun and interactive browser game where players try to click on moles that pop up randomly before they disappear.",
-    image: "/whackAmole.png",
+     image: `${import.meta.env.BASE_URL}whackAmole.png`,
     tech: [ "JavaScript", "HTML", "CSS"],
     
     githubUrl: "https://github.com/kenanboracic4/Whack-A-Mole",
@@ -15,14 +15,21 @@ const allProjects = [
   {
     title: "Restaurant Website",
     description: "A modern, simple  and responsive restaurant website featuring a menu,visually appealing layout for showcasing dishes.",
-    image: "/mattone.png",
+    image: `${import.meta.env.BASE_URL}mattone.png`,
     tech: [ "JavaScript", "HTML", "CSS"],
     githubUrl: "https://github.com/kenanboracic4/MattoneWebsite",
   },
   {
     title: "Movie App",
     description: "A movie browsing app that allows users to search for trending films, view details, and explore current popular titles using a movie API.",
-    image: "/movieApp.png",
+    image: `${import.meta.env.BASE_URL}movieApp.png`,
+    tech: ["React", "JavaScript", "CSS","Framer Motion"],
+    githubUrl: "#",
+  },
+    {
+    title: "Svileni Kutak Website",
+    description: "Svileni Kutak offers handcrafted luxury mulberry silk products, combining elegance, comfort, and natural beauty for your everyday indulgence",
+    image: `${import.meta.env.BASE_URL}svileniKutak.png`,
     tech: ["React", "JavaScript", "CSS"],
     githubUrl: "#",
   },

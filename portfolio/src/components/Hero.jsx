@@ -2,11 +2,38 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import '../index.css';
+import '../index.css'
 
 const Hero = ({ darkMode }) => {
   const [displayText, setDisplayText] = useState("")
   const fullText = "Code that looks good and works even better"
+
+  const smoothScrollTo = (targetId) => {
+    const target = document.getElementById(targetId)
+    if (!target) return
+
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset
+    const startPosition = window.pageYOffset
+    const distance = targetPosition - startPosition
+    const duration = 800
+    let start = null
+
+    const ease = (t) =>
+      t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp
+      const timeElapsed = timestamp - start
+      const progress = Math.min(timeElapsed / duration, 1)
+      const run = startPosition + distance * ease(progress)
+      window.scrollTo(0, run)
+      if (timeElapsed < duration) {
+        requestAnimationFrame(step)
+      }
+    }
+
+    requestAnimationFrame(step) // <-- Ovo je nedostajalo
+  }
 
   useEffect(() => {
     let index = 0
@@ -21,13 +48,6 @@ const Hero = ({ darkMode }) => {
 
     return () => clearInterval(timer)
   }, [])
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   return (
     <section id="home" className="hero-section">
@@ -67,19 +87,7 @@ const Hero = ({ darkMode }) => {
           transition={{ delay: 3 }}
           className="hero-buttons"
         >
-          <button
-            onClick={() => scrollToSection("projects")}
-            className={darkMode ? "btn-primary-dark" : "btn-primary-light"}
-          >
-            View Projects
-          </button>
-
-          <button
-            onClick={() => scrollToSection("contact")}
-            className={darkMode ? "btn-outline-dark" : "btn-outline-light"}
-          >
-            Contact Me
-          </button>
+          
         </motion.div>
       </div>
     </section>
