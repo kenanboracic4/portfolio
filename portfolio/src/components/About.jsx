@@ -56,23 +56,24 @@ const About = ({ darkMode }) => {
               className="about-text"
             >
               <h3 className={`subtitle ${darkMode ? "text-white" : "text-dark"}`}>
-               Hi, I’m Kenan Boracic – a Frontend Developer
+                Hi, I'm Kenan Boracic – a Full-Stack Developer
               </h3>
               <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
-                What drives me isn't just writing code — it's the process of understanding people, translating ideas into smooth interfaces, and making sure every interaction feels just right. I love the craft behind a well-designed product: from layout and motion, to performance and accessibility.
+                What drives me isn't just writing code — it's the satisfaction of building something complete, from the database schema to the pixel on screen. I love owning the full picture: designing APIs that feel intuitive, architecting backends that scale, and crafting frontends that users actually enjoy.
               </p>
               <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
-               I care about the details, the people I build for, and the teams I build with. Whether I'm working solo or collaborating on a complex project, I bring empathy, curiosity, and a strong sense of ownership to everything I do.
+                I care about writing code that's clean, systems that are reliable, and products that genuinely serve people. Whether I'm deep in server logic or fine-tuning a UI, I bring the same curiosity, attention to detail, and sense of ownership to every layer of the stack.
               </p>
-             
 
+              {/* 
               <div className="about-stats">
-                <div id="cv-div"className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
-                  
-                  <div id="cv-btn"className={`stat-label ${darkMode ? "text-blue-50" : "text-blue-500"}`}>Download CV</div>
+                <div id="cv-div" className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
+
+                  <div id="cv-btn" className={`stat-label ${darkMode ? "text-blue-50" : "text-blue-500"}`}>Download CV</div>
                 </div>
-                
+
               </div>
+              */}
             </motion.div>
           </div>
         </motion.div>

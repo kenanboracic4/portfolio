@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin, Instagram, Mail } from "lucide-react"
 import "../index.css"
 
 const Footer = ({ darkMode }) => {
@@ -25,10 +25,10 @@ const Footer = ({ darkMode }) => {
   }, [])
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "#", label: "Email" },
+    { icon: Github, href: "https://github.com/kenanboracic4", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/kenan-boracic", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/webbykenan/", label: "Instagram" },
+    { icon: Mail, href: "mailto:kenanboracic.dev@gmail.com", label: "Email" },
   ]
 
   return (
@@ -67,9 +67,11 @@ const Footer = ({ darkMode }) => {
               key={social.label}
               href={social.href}
               initial={{ opacity: 0, scale: 0 }}
+              target="_blank"
+              rel="noopener noreferrer"
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-              whileHover={{ scale: 1.2, y: -5 }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.1, y: -3 }}
               viewport={{ once: true }}
               className={`footer-icon ${darkMode ? "icon-dark" : "icon-light"}`}
               aria-label={social.label}
@@ -86,8 +88,8 @@ const Footer = ({ darkMode }) => {
           viewport={{ once: true }}
           className={`footer-copy ${darkMode ? "text-white" : "text-dark"}`}
         >
-          <p>&copy; {new Date().getFullYear()} Kenan Boracic. All rights reserved.</p>
-          <p className="footer-built-with">Built with React, CSS, and Framer Motion</p>
+          <p>&copy; {new Date().getFullYear()} Kenan Boracic.</p>
+
         </motion.div>
       </div>
     </footer>

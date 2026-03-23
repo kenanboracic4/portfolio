@@ -1,39 +1,41 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github, ArrowDown, ArrowUp } from "lucide-react";
 import "../index.css";
 
 const allProjects = [
   {
     title: "Whack-a-Mole Game",
-    description: "A fun and interactive browser game where players try to click on moles that pop up randomly before they disappear.",
-     image: `${import.meta.env.BASE_URL}whackAmole.png`,
-    tech: [ "JavaScript", "HTML", "CSS"],
-    
+    description:
+      "A fun and interactive browser game where players try to click on moles that pop up randomly before they disappear.",
+    image: `${import.meta.env.BASE_URL}whackAmole.png`,
+    tech: ["JavaScript", "HTML", "CSS"],
     githubUrl: "https://github.com/kenanboracic4/Whack-A-Mole",
   },
   {
     title: "Restaurant Website",
-    description: "A modern, simple  and responsive restaurant website featuring a menu,visually appealing layout for showcasing dishes.",
+    description:
+      "A modern, simple and responsive restaurant website featuring a menu and visually appealing layout for showcasing dishes.",
     image: `${import.meta.env.BASE_URL}mattone.png`,
-    tech: [ "JavaScript", "HTML", "CSS"],
+    tech: ["JavaScript", "HTML", "CSS"],
     githubUrl: "https://github.com/kenanboracic4/MattoneWebsite",
   },
   {
     title: "Movie App",
-    description: "A movie browsing app that allows users to search for trending films, view details, and explore current popular titles using a movie API.",
+    description:
+      "A movie browsing app that allows users to search for trending films, view details, and explore current popular titles using a movie API.",
     image: `${import.meta.env.BASE_URL}movieApp.png`,
-    tech: ["React", "JavaScript", "CSS","Framer Motion"],
+    tech: ["React", "JavaScript", "CSS", "Framer Motion"],
     githubUrl: "#",
   },
-    {
+  {
     title: "Svileni Kutak Website",
-    description: "Svileni Kutak offers handcrafted luxury mulberry silk products, combining elegance, comfort, and natural beauty for your everyday indulgence",
+    description:
+      "Svileni Kutak offers handcrafted luxury mulberry silk products, combining elegance, comfort, and natural beauty for everyday indulgence.",
     image: `${import.meta.env.BASE_URL}svileniKutak.png`,
     tech: ["React", "JavaScript", "CSS"],
     githubUrl: "#",
   },
- 
 ];
 
 const Projects = ({ darkMode }) => {
@@ -42,13 +44,9 @@ const Projects = ({ darkMode }) => {
   const [visibleProjectsCount, setVisibleProjectsCount] = useState(3);
 
   const toggleProjects = () => {
-    if (visibleProjectsCount === 3) {
-      // Show all projects
-      setVisibleProjectsCount(allProjects.length);
-    } else {
-      // Show only 3 projects
-      setVisibleProjectsCount(3);
-    }
+    setVisibleProjectsCount((prev) =>
+      prev === allProjects.length ? 3 : allProjects.length
+    );
   };
 
   const visibleProjects = allProjects.slice(0, visibleProjectsCount);
@@ -57,6 +55,7 @@ const Projects = ({ darkMode }) => {
   return (
     <section id="projects" className="projects-section">
       <div className="projects-container">
+
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -64,13 +63,21 @@ const Projects = ({ darkMode }) => {
           transition={{ duration: 0.8 }}
           className="projects-header"
         >
-          <h2 className={`projects-title ${darkMode ? "gradient-dark" : "gradient-light"}`}>
+          <h2
+            className={`projects-title ${darkMode ? "gradient-dark" : "gradient-light"
+              }`}
+          >
             Featured Projects
           </h2>
-          <p className={`projects-description ${darkMode ? "text-light" : "text-dark"}`}>
-            Here are some of my recent projects that showcase my skills and creativity
+          <p
+            className={`projects-description ${darkMode ? "text-light" : "text-dark"
+              }`}
+          >
+            Here are some of my recent projects that showcase my skills and
+            creativity
           </p>
         </motion.div>
+
 
         <div className="projects-grid">
           {visibleProjects.map((project, index) => (
@@ -81,54 +88,83 @@ const Projects = ({ darkMode }) => {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`project-card ${darkMode ? "card-dark" : "card-light"}`}
             >
+
               <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-image" />
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
                 <div className="project-image-overlay" />
               </div>
 
+
               <div className="project-content">
-                <h3 className={`project-title ${darkMode ? "text-white" : "text-dark"}`}>
+                <h3
+                  className={`project-title ${darkMode ? "text-white" : "text-dark"
+                    }`}
+                >
                   {project.title}
                 </h3>
-                <p className={`project-desc ${darkMode ? "text-light" : "text-dark"}`}>
+                <p
+                  className={`project-desc ${darkMode ? "text-light" : "text-dark"
+                    }`}
+                >
                   {project.description}
                 </p>
+
 
                 <div className="tech-stack">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className={`tech-badge ${darkMode ? "tech-dark" : "tech-light"}`}
+                      className={`tech-badge ${darkMode ? "tech-dark" : "tech-light"
+                        }`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                  <a href={project.githubUrl}> <Github className="icon" />
+
+
                 <div className="project-buttons">
-                 
-                  <button className={`btn-code ${darkMode ? "btn-outline-dark" : "btn-outline-light"}`}>
-                   
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`btn-code ${darkMode ? "btn-outline-dark" : "btn-outline-light"
+                      }`}
+                  >
+                    <Github size={16} className="icon" />
                     Code
-                    
-                  </button>
+                  </a>
                 </div>
-                </a>
               </div>
             </motion.div>
           ))}
         </div>
 
-       <div className="load-more-container">
-  <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    onClick={toggleProjects}
-    className={`load-more-btn ${darkMode ? "dark" : "light"}`}
-  >
-    {showAll ? "Close All" : "Load More Projects"}
-  </motion.button>
-</div>
+
+        <div className="load-more-container">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={toggleProjects}
+            className={`load-more-btn ${darkMode ? "dark" : "light"}`}
+          >
+            {showAll ? (
+              <>
+                <ArrowUp size={16} style={{ marginRight: "6px" }} />
+                Close All
+              </>
+            ) : (
+              <>
+                <ArrowDown size={16} style={{ marginRight: "6px" }} />
+                Load More Projects
+              </>
+            )}
+          </motion.button>
+        </div>
       </div>
     </section>
   );

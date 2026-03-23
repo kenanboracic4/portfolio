@@ -8,11 +8,11 @@ import "../index.css"
 
 const Contact = ({ darkMode }) => {
   const ref = useRef(null)
-   const formRef = useRef(null); // Dodan ref za formu
+  const formRef = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.1 })
-   const [isSending, setIsSending] = useState(false); // Stanje za prikazivanje loadinga
-  const [isSuccess, setIsSuccess] = useState(false); // Stanje za uspješno slanje
-  const [error, setError] = useState(null); // Stanje za greške
+  const [isSending, setIsSending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,18 +23,18 @@ const Contact = ({ darkMode }) => {
     e.preventDefault()
     setIsSending(true);
     setError(null);
-     
+
     try {
-      // TODO: Zamijeni ove ID-jeve sa svojim podacima iz EmailJS dashboarda
+
       await emailjs.sendForm(
-    import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    formRef.current,
-    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-  )
-       setIsSuccess(true);
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      setIsSuccess(true);
       setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setIsSuccess(false), 3000); // Sakrij poruku nakon 3 sekunde
+      setTimeout(() => setIsSuccess(false), 3000);
     } catch (err) {
       console.error('Failed to send email:', err);
       setError('Failed to send message. Please try again later.');
@@ -72,7 +72,7 @@ const Contact = ({ darkMode }) => {
             </span>
           </h2>
           <p className={`contact-subtitle ${darkMode ? "dark-subtitle" : ""}`}>
-           Have a project in mind? Let’s build it together!
+            Have a project in mind? Let’s build it together!
           </p>
         </motion.div>
 
@@ -96,7 +96,7 @@ const Contact = ({ darkMode }) => {
 
             <div className="contact-items">
               {[
-                 { icon: Mail, label: "Email", value: "kenanboracic.dev@gmail.com", color: "blue" },
+                { icon: Mail, label: "Email", value: "kenanboracic.dev@gmail.com", color: "blue" },
                 { icon: Phone, label: "Phone", value: "+387 060 3470 471", color: "green" },
                 { icon: MapPin, label: "Location", value: "Sarajevo, BiH", color: "purple" },
               ].map((contact, index) => (
@@ -156,7 +156,7 @@ const Contact = ({ darkMode }) => {
                   required
                 />
               </div>
-              
+
               {/* Feedback poruke */}
               {isSuccess && (
                 <div className="success-message">
@@ -168,9 +168,9 @@ const Contact = ({ darkMode }) => {
                   {error}
                 </div>
               )}
-              
-              <button 
-                type="submit" 
+
+              <button
+                type="submit"
                 className="submit-button"
                 disabled={isSending}
               >
