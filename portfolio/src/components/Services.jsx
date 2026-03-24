@@ -3,28 +3,26 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Code, Palette, Smartphone, Globe, Zap, Users } from "lucide-react"
-import "../index.css" // link na CSS
+import "../index.css"
 
 const services = [
   {
     icon: Code,
-    title: "Web Development",
-    description: "Custom websites and web applications built with modern technologies and best practices.",
-    features: ["React", "Javascript", "WordPress", "HTML/CSS"],
+    title: "Full-Stack Development",
+    description: "Architecting robust, scalable web applications with a focus on seamless integration between frontend interactivity and backend efficiency.",
+    features: ["PERN Stack (PostgreSQL, Express, React, Node)", "Java & SQL Databases", "RESTful API Development"],
   },
-
   {
     icon: Palette,
-    title: "UI/UX Design",
-    description: "Beautiful and intuitive user interfaces designed with user experience in mind.",
-    features: ["Figma Design", "User Research"],
+    title: "UI/UX & Product Design",
+    description: "Crafting visually compelling and user-centric interfaces that enhance engagement through intuitive navigation and modern aesthetics.",
+    features: ["Figma Prototyping", "Responsive Interface Design", "User Experience Research", "Framer Motion Animations"],
   },
-  
   {
     icon: Zap,
-    title: "Performance Optimization",
-    description: "Speed up your website and improve user experience with advanced optimization techniques.",
-    features: ["Core Web Vitals", "SEO Optimization", "Caching Strategies"],
+    title: "Optimization & Scalability",
+    description: "Ensuring peak performance and long-term reliability through strategic code optimization, SEO, and efficient data management.",
+    features: ["Core Web Vitals", "SEO & Digital Strategy", "Database Query Optimization", "Performance Auditing"],
   },
 ]
 
@@ -160,7 +158,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-       
+
         </motion.div>
       </div>
     </section>

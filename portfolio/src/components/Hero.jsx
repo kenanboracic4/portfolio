@@ -32,7 +32,7 @@ const Hero = ({ darkMode }) => {
       }
     }
 
-    requestAnimationFrame(step) // <-- Ovo je nedostajalo
+    requestAnimationFrame(step)
   }
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const Hero = ({ darkMode }) => {
           transition={{ delay: 3 }}
           className="hero-buttons"
         >
-          
+
         </motion.div>
       </div>
     </section>

@@ -51,7 +51,7 @@ const Contact = ({ darkMode }) => {
   }
   const contactDetails = [
     { icon: Mail, label: "Email", value: "kenanboracic.dev@gmail.com", color: "blue" },
-    { icon: Phone, label: "Phone", value: "+387 060 3470 471", color: "green" },
+    { icon: Phone, label: "Phone", value: "+387 60 3470 471", color: "green" },
     { icon: MapPin, label: "Location", value: "Sarajevo, BiH", color: "purple" },
   ];
 

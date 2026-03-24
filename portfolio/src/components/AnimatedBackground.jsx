@@ -17,17 +17,17 @@ const AnimatedBackground = ({ darkMode }) => {
 
   const backgroundVariants = darkMode
     ? [
-        "radial-gradient(circle at 20% 50%, #1e40af 0%, transparent 50%)",
-        "radial-gradient(circle at 80% 20%, #7c3aed 0%, transparent 50%)",
-        "radial-gradient(circle at 40% 80%, #1e40af 0%, transparent 50%)",
-        "radial-gradient(circle at 20% 50%, #1e40af 0%, transparent 50%)",
-      ]
+      "radial-gradient(circle at 20% 50%, #1e40af 0%, transparent 50%)",
+      "radial-gradient(circle at 80% 20%, #7c3aed 0%, transparent 50%)",
+      "radial-gradient(circle at 40% 80%, #1e40af 0%, transparent 50%)",
+      "radial-gradient(circle at 20% 50%, #1e40af 0%, transparent 50%)",
+    ]
     : [
-        "radial-gradient(circle at 20% 50%, #3b82f6 0%, transparent 50%)",
-        "radial-gradient(circle at 80% 20%, #8b5cf6 0%, transparent 50%)",
-        "radial-gradient(circle at 40% 80%, #3b82f6 0%, transparent 50%)",
-        "radial-gradient(circle at 20% 50%, #3b82f6 0%, transparent 50%)",
-      ]
+      "radial-gradient(circle at 20% 50%, #3b82f6 0%, transparent 50%)",
+      "radial-gradient(circle at 80% 20%, #8b5cf6 0%, transparent 50%)",
+      "radial-gradient(circle at 40% 80%, #3b82f6 0%, transparent 50%)",
+      "radial-gradient(circle at 20% 50%, #3b82f6 0%, transparent 50%)",
+    ]
 
   return (
     <div className="animated-bg-wrapper">
@@ -41,7 +41,7 @@ const AnimatedBackground = ({ darkMode }) => {
         }}
       />
 
-      {[...Array(50)].map((_, i) => {
+      {[...Array(10)].map((_, i) => {
         const randomX = (Math.random() - 0.5) * 200
         const randomY = (Math.random() - 0.5) * 200
         const delay = Math.random() * 5
