@@ -72,8 +72,8 @@ const About = ({ darkMode }) => {
               <div className="about-stats">
                 <div className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
                   <a
-                    href={`${import.meta.env.BASE_URL}KenanBoracic.pdf`}
-                    download="KenanBoracic.pdf"
+                    href={`${import.meta.env.BASE_URL}KenanBoracic_CV.pdf`}
+                    download="KenanBoracic_CV.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cv-download-link"
