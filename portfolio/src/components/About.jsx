@@ -55,17 +55,20 @@ const About = ({ darkMode }) => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="about-text"
             >
+
               <h3 className={`subtitle ${darkMode ? "text-white" : "text-dark"}`}>
-                Hi, I'm Kenan Boracic – a Full-Stack Developer
+                Hi, I'm Kenan Boracic — a Full-Stack Engineer bridging the gap between logic and experience.
               </h3>
+
               <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
-                What drives me isn't just writing code — it's the satisfaction of building something complete, from the database schema to the pixel on screen. I love owning the full picture: designing APIs that feel intuitive, architecting backends that scale, and crafting frontends that users actually enjoy.
-              </p>
-              <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
-                I care about writing code that's clean, systems that are reliable, and products that genuinely serve people. Whether I'm deep in server logic or fine-tuning a UI, I bring the same curiosity, attention to detail, and sense of ownership to every layer of the stack.
+                My work is defined by a deep commitment to **end-to-end ownership**. I specialize in architecting scalable backend systems and crafting high-fidelity frontends, ensuring that every layer of the stack — from complex database schemas to the final UI interaction — operates with absolute precision and performance.
               </p>
 
-              {/* 
+              <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
+                With a primary focus on the **PERN stack** and a growing expertise in high-performance Python frameworks, I build digital solutions that are as structurally sound as they are visually engaging. I prioritize clean, maintainable code and strategic optimization to deliver products that don't just function, but truly excel in a production environment.
+              </p>
+
+
               <div className="about-stats">
                 <div id="cv-div" className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
 
@@ -73,7 +76,7 @@ const About = ({ darkMode }) => {
                 </div>
 
               </div>
-              */}
+
             </motion.div>
           </div>
         </motion.div>
