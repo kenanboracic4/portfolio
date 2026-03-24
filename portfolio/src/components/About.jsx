@@ -57,7 +57,7 @@ const About = ({ darkMode }) => {
             >
 
               <h3 className={`subtitle ${darkMode ? "text-white" : "text-dark"}`}>
-                Hi, I'm Kenan Boracic — a Full-Stack Engineer bridging the gap between logic and experience.
+                Hi, I'm Kenan Boracic | Full-Stack Engineer
               </h3>
 
               <p className={`about-desc ${darkMode ? "text-white-70" : "text-gray"}`}>
@@ -70,11 +70,20 @@ const About = ({ darkMode }) => {
 
 
               <div className="about-stats">
-                <div id="cv-div" className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
-
-                  <div id="cv-btn" className={`stat-label ${darkMode ? "text-blue-50" : "text-blue-500"}`}>Download CV</div>
+                <div className={`stat-box ${darkMode ? "bg-dark-box" : "bg-light-box"}`}>
+                  <a
+                    href={`${import.meta.env.BASE_URL}KenanBoracic.pdf`}
+                    download="KenanBoracic.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cv-download-link"
+                    style={{ textDecoration: 'none', width: '100%', display: 'block' }}
+                  >
+                    <div id="cv-btn" className={`stat-label ${darkMode ? "text-blue-50" : "text-blue-500"}`}>
+                      Download CV
+                    </div>
+                  </a>
                 </div>
-
               </div>
 
             </motion.div>
