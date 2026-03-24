@@ -5,12 +5,60 @@ import "../index.css";
 
 const allProjects = [
   {
-    title: "Whack-a-Mole Game",
+    title: "TerminPlus",
     description:
-      "A fun and interactive browser game where players try to click on moles that pop up randomly before they disappear.",
-    image: `${import.meta.env.BASE_URL}whackAmole.png`,
-    tech: ["JavaScript", "HTML", "CSS"],
-    githubUrl: "https://github.com/kenanboracic4/Whack-A-Mole",
+      "A multi-sport matchmaking and booking platform designed for scheduling sessions, managing player sign-ups, and finding teammates for various sports activities.",
+    image: `${import.meta.env.BASE_URL}3.png`,
+    tech: ["Node.js", "Express.js", "React.js", "PostgreSQL"],
+    githubUrl: "https://github.com/kenanboracic4/TerminPlus",
+  },
+  {
+    title: "Employee Records",
+    description:
+      "A comprehensive human resources and payroll management dashboard designed for tracking employee records, processing payments, and monitoring system anomalies.",
+    image: `${import.meta.env.BASE_URL}2.png`,
+    tech: ["Node.js", "Express.js", "React.js", "PostgreSQL"],
+    githubUrl: "https://github.com/kenanboracic4/employee-management-system",
+  },
+  {
+    title: "Book Hub",
+    description:
+      "A book recommendation and e-commerce platform that allows users to search, sell, buy books, and communicate with other users.",
+    image: `${import.meta.env.BASE_URL}1.png`,
+    tech: ["Node.js", "Express.js", "PostgreSQL"],
+    githubUrl: "https://github.com/kenanboracic4/BookHub",
+  },
+  {
+    title: "Student Information System",
+    description:
+      "A comprehensive Student Information System (SIS) desktop application designed to streamline academic administration, manage enrollments, and track performance.",
+    image: `${import.meta.env.BASE_URL}5.png`,
+    tech: ["Java", "Java Swing", "SQLite"],
+    githubUrl: "https://github.com/kenanboracic4/Student_Management_System",
+  },
+  {
+    title: "Movie App",
+    description:
+      "A movie browsing app that allows users to search for trending films, view details, and explore popular titles using a real-time movie API.",
+    image: `${import.meta.env.BASE_URL}movieApp.png`,
+    tech: ["React", "JavaScript", "CSS", "Framer Motion"],
+    githubUrl: "https://github.com/kenanboracic4/Movie-Shows-App",
+  },
+  {
+    title: "NewsFeed",
+    description:
+      "A responsive multi-platform news aggregator that delivers real-time global headlines and categorized updates through a sleek interface.",
+    image: `${import.meta.env.BASE_URL}4.png`,
+    tech: ["React.js", "CSS"],
+    githubUrl: "https://github.com/kenanboracic4/News",
+  },
+  {
+    title: "Svileni Kutak Website",
+    description:
+      "Svileni Kutak offers handcrafted luxury mulberry silk products, combining elegance, comfort, and natural beauty for everyday indulgence.",
+    image: `${import.meta.env.BASE_URL}svileniKutak.png`,
+    tech: ["React", "JavaScript", "CSS"],
+    githubUrl: "#",
   },
   {
     title: "Restaurant Website",
@@ -21,20 +69,12 @@ const allProjects = [
     githubUrl: "https://github.com/kenanboracic4/MattoneWebsite",
   },
   {
-    title: "Movie App",
+    title: "Whack-a-Mole Game",
     description:
-      "A movie browsing app that allows users to search for trending films, view details, and explore current popular titles using a movie API.",
-    image: `${import.meta.env.BASE_URL}movieApp.png`,
-    tech: ["React", "JavaScript", "CSS", "Framer Motion"],
-    githubUrl: "#",
-  },
-  {
-    title: "Svileni Kutak Website",
-    description:
-      "Svileni Kutak offers handcrafted luxury mulberry silk products, combining elegance, comfort, and natural beauty for everyday indulgence.",
-    image: `${import.meta.env.BASE_URL}svileniKutak.png`,
-    tech: ["React", "JavaScript", "CSS"],
-    githubUrl: "#",
+      "A fun and interactive browser game where players try to click on moles that pop up randomly before they disappear.",
+    image: `${import.meta.env.BASE_URL}whackAmole.png`,
+    tech: ["JavaScript", "HTML", "CSS"],
+    githubUrl: "https://github.com/kenanboracic4/Whack-A-Mole",
   },
 ];
 
